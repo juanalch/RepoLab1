@@ -6,3 +6,6 @@ Integrantes: Juana lozano Chaves y Laura Alejandra Venegas Piraban
 Fecha: 8 de agosto de 2025
 
 Prueba 2 Intento de resolución mediante intellij
+
+Prueba 3 
+Las dos intentamos hacer modificaciones en el README y hacer un pull reques desde la rama de cada una. 
