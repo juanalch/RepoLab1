@@ -6,3 +6,6 @@ Integrantes: Juana lozano Chaves y Laura Alejandra Venegas Piraban
 Fecha: 8 de agosto de 2025
 
 Prueba 2 Intento de resolución mediante intellij
+
+
+Esta es la tercera prueba que se hace
