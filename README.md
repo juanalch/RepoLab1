@@ -8,4 +8,6 @@ Fecha: 8 de agosto de 2025
 Prueba 2 Intento de resolución mediante intellij
 
 
-Esta es la tercera prueba que se hace
+Prueba 3 
+Las dos intentamos hacer modificaciones en el README y hacer un pull reques desde la rama de cada una. 
+Dejamos los cambios propuestos por Juana
