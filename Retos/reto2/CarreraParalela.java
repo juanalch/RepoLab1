@@ -18,4 +18,19 @@ public class CarreraParalela {
                 .orElseThrow(() -> new IllegalArgumentException("Lista vacía"));
     }
 
+      // ===== Soporte carril2 =====
+    static class MinYConteo {
+        final int min;
+        final int count;
+        MinYConteo(int min, int count) { this.min = min; this.count = count; }
+    }
+ 
+    // ===== Carril 2: mínimo y conteo con lambda =====
+    public static MinYConteo minYConteo(List<Integer> lista) {
+        int min = lista.stream()
+                .min(Integer::compareTo)
+                .orElseThrow(() -> new IllegalArgumentException("Lista vacía"));
+        int count = (int) lista.stream().count();
+        return new MinYConteo(min, count);
+    }
 }
