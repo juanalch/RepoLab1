@@ -15,7 +15,11 @@ public class Reto3EcoMisterioso {
         sb.append(resultado);
         return sb.toString();
     }
-
+     // Estudiante B: método con StringBuffer que invierte el mensaje
+    public static String invertirConStringBuffer(String mensaje) {
+        StringBuffer sb = new StringBuffer(mensaje);
+        return sb.reverse().toString();
+    }
     
 
     public static void main(String[] args) {
