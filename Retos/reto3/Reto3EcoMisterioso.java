@@ -2,7 +2,6 @@ package Retos.reto3;
 
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import java.util.function.Function;
 
 public class Reto3EcoMisterioso {
 
@@ -21,16 +20,7 @@ public class Reto3EcoMisterioso {
         StringBuffer sb = new StringBuffer(mensaje);
         return sb.reverse().toString();
     }
-    // Función combinada: repetir 3 veces y luego invertir el resultado
-    public static String repetirYInvertir(String mensaje) {
-        // Repetir 3 veces con stream (como hizo A)
-        String repetido = Stream.generate(() -> mensaje)
-                                .limit(3)
-                                .collect(Collectors.joining(" "));
-        // Invertir con StringBuffer (como hizo B)
-        StringBuffer sb = new StringBuffer(repetido);
-        return sb.reverse().toString();
-    }
+    
 
     public static void main(String[] args) {
         // Lambda para invocar la función combinada
