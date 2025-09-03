@@ -36,14 +36,6 @@ public class BatallaDeConjuntos {
         // Unir y ordenar los conjuntos filtrados
         Set<Integer> union = unirYOrdenar(filtradoHash, filtradoTree);
 
-
-        // Aplicar filtros respectivos
-        Set<Integer> filtradoHash = hashSetSinMultiplosDe3(conjuntoHash);
-        Set<Integer> filtradoTree = treeSetSinMultiplosDe5(conjuntoTree);
- 
-        // Unir y ordenar los conjuntos filtrados
-        Set<Integer> union = unirYOrdenar(filtradoHash, filtradoTree);
-
         // Imprimir resultados con lambda
         union.forEach(n -> System.out.println("Número en arena: " + n));
     }
