@@ -18,7 +18,6 @@ public class BatallaDeConjuntos {
                 .filter(n -> n % 5 != 0)
                 .collect(Collectors.toCollection(TreeSet::new)); // mantiene orden natural
     }
-
     // Choque
     public static Set<Integer> unirYOrdenar(Set<Integer> conj1, Set<Integer> conj2) {
         return Stream.concat(conj1.stream(), conj2.stream())
@@ -34,6 +33,14 @@ public class BatallaDeConjuntos {
         Set<Integer> filtradoHash = hashSetSinMultiplosDe3(conjuntoHash);
         Set<Integer> filtradoTree = treeSetSinMultiplosDe5(conjuntoTree);
 
+        // Unir y ordenar los conjuntos filtrados
+        Set<Integer> union = unirYOrdenar(filtradoHash, filtradoTree);
+
+
+        // Aplicar filtros respectivos
+        Set<Integer> filtradoHash = hashSetSinMultiplosDe3(conjuntoHash);
+        Set<Integer> filtradoTree = treeSetSinMultiplosDe5(conjuntoTree);
+ 
         // Unir y ordenar los conjuntos filtrados
         Set<Integer> union = unirYOrdenar(filtradoHash, filtradoTree);
 
