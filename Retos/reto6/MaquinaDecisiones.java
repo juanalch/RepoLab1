@@ -1,4 +1,7 @@
 package Retos.reto6;
+import java.util.HashMap;
+import java.util.Map;
+ 
 public class MaquinaDecisiones {
  
     private final Map<String, Runnable> comandos = new HashMap<>();
