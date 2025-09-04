@@ -11,4 +11,12 @@ public class Reto4Tesoro {
         }
         return table;
         }
+
+    public static Map<String, Integer> mergeMaps(
+            Map<String, Integer> hashMap,
+            Map<String, Integer> hashTable) {
+        Map<String, Integer> merged = new HashMap<>(hashMap);
+        merged.putAll(hashTable); // si hay conflicto, Hashtable sobrescribe
+        return merged;
+    }
 }
