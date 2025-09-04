@@ -86,6 +86,38 @@ Considerada "legacy" (anterior a Java 2).
 
 Hoy en día se recomienda el uso de HashMap + Collections.synchronizedMap() o ConcurrentHashMap cuando la sincronización es un requerimiento.
 
+**7.	Qué ventajas tiene Collectors.toMap() frente a un bucle tradicional para llenar un mapa?**  
+ESto nos permite un código más conciso pues reduce varias líneas de codigo en una sola expresión, además que es menos propenso a errores.  
+Tambien hace eque el código sea más claro y fácil de entender.
+
+**8.	Si usas List con objetos y luego aplicas stream().map() que tipo de operación estas haciendo?**  
+Se estaría realizando una operación de transformación, el método map() toma cada elemento del stream, aplica una función sobre él y produce un nuevo stream con los resultados transformaados.  
+
+**9.	Que hace el método stream().filter() y que retorna?**    
+El método strams().filter() reaaliza una operación de filtrado sobre los elementos del stream.
+Es decir que toma una función que retorna boolean como argumento y evalúa cada elemnto del stream contra esta funcion, retorna un nuevo stream que contine solo los elementos que cumplen con la condición del predicado, los que retornan true.
+
+**10.	 Describe el paso a paso de cómo crear una rama desde develop si es una funcionalidad nueva.**  
+Pasos:  
+1.	Sincronizar con el repositorio remoto
+git checkout develop  
+git pull origin develop  
+2.	Crear la rama feature  
+git checkout -b feature/nombre-funcionalidad  
+3.	Desarrollar la funcionalidad haciendo commits   
+git add .  
+git commit -m "Descripción del cambio"  
+4.	Subir la rama al repo remoto  
+git push origin feature/nombre-funcionalidad  
+5.	Crear un pull request desde la rama feature hacia develop para revisión y merge.  
+**11.	¿Cuál es la diferencia entre crear una rama con git branch y con git checkout -b?**    
+La diferencia entre estas es que el git checkout -b yyy una vez se ejecuta crea la nueva rama y nos hace un "switch" automatico a esa rama creada, mientra que el otro no y toca hacer checkout para pasarse a la rama que se acaba de crear.
+
+**12.	¿Por qué es recomendable crear ramas feature/ para nuevas funcionalidades en lugar de trabajar en main directamente?**  
+
+Esto es recomendado por diferentes razones por ejemplo múltiples desarrolladores pueden trabajar en diferentes features simultáneamente, si hay problemas se puede eliminar la rama feature sin afectar el main, facilita la revisión mediate pull request y el main siempre permanece estable y funcional.
+
+
 
 **Texto realizado para la primera parte del laboratorio:**
 prueba 1
