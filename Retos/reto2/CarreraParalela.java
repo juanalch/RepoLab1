@@ -31,10 +31,20 @@ public class CarreraParalela {
         r.put("min", min);
         r.put("count", count);
         return r;
+  }
+ 
+ 
+// ===== Función de choque (carril 1) =====
+
+public static Map<String,Object> calcularResultados(List<Integer> lista) {
+    int max = maxOf(lista);
+    Map<String,Integer> myc = minYConteo(lista);
+    Map<String,Object> res = new LinkedHashMap<>();
+    res.put("max", max);
+    res.put("min", myc.get("min"));
+    res.put("count", myc.get("count"));
+    return res;
+
 }
+
  
- 
- 
- 
- 
-}
