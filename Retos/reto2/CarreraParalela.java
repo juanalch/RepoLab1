@@ -9,8 +9,14 @@ public class CarreraParalela {
         // ====== Punto de partida ======
         List<Integer> lista1 = Arrays.asList(10, 20, 5, 7, 30);
         List<Integer> lista2 = Arrays.asList(3, 9, 12, 1, 25, 40);
- 
+
+        Map<String, Map<String,Object>> resultados = calcularResultadosParaDosListas(lista1, lista2);
+
+        System.out.println("Resultados lista1 -> " + resultados.get("lista1"));
+        System.out.println("Resultados lista2 -> " + resultados.get("lista2"));
     }
+
+    
     // ===== Carril 1: máximo con lambda =====
     public static java.util.function.Function<List<Integer>, Integer> maxLambda =
         lista -> lista.stream()
@@ -56,6 +62,14 @@ public class CarreraParalela {
         res.put("countEsImpar", (count % 2 != 0) ? true : false);     
         return res;
         
+    }
+
+        // ===== calcularResultadosParaDosListas (meta final) =====
+    public static Map<String, Map<String,Object>> calcularResultadosParaDosListas(List<Integer> l1, List<Integer> l2) {
+        Map<String, Map<String,Object>> out = new LinkedHashMap<>();
+        out.put("lista1", calcularResultados(l1));
+        out.put("lista2", calcularResultados(l2));
+        return out;
     }
 
 
