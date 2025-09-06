@@ -41,10 +41,16 @@ public class CarreraParalela {
         int min = myc.get("min");
         int count = myc.get("count");
 
+        boolean maxDivisorDe2 = (max != 0 && (2 % max == 0)) ? true : false;
+        boolean countEsImpar = (count % 2 != 0) ? true : false;
+
         Map<String,Object> res = new LinkedHashMap<>();
         res.put("max", max);
         res.put("min", min);
         res.put("count", count);
+        res.put("maxDivisorDe2", maxDivisorDe2);
+        res.put("countEsImpar", countEsImpar);
+        
         return res;
     }
 
