@@ -38,17 +38,22 @@ public class CarreraParalela {
         int max = maxOf(lista);
         Map<String,Integer> myc = minYConteo(lista);
         int min = myc.get("min");
-        int count = myc.get("count");
+        int count = myc.get("count"); 
     
         boolean maxMultiploDe2 = (max % 2 == 0) ? true : false;
-        boolean countEsPar = (count % 2 == 0) ? true : false;
-    
+        boolean maxDivisorDe2 = (max != 0 && (2 % max == 0)) ? true : false;
+        String parity = (count % 2 == 0) ? "par" : "impar";
+
         Map<String,Object> res = new LinkedHashMap<>();
         res.put("max", max);
         res.put("min", min);
         res.put("count", count);
+
         res.put("maxMultiploDe2", maxMultiploDe2);
-        res.put("countEsPar", countEsPar);
+        res.put("maxDivisorDe2", maxDivisorDe2);
+        res.put("countParImpar", parity);
+        res.put("countEsPar", (count % 2 == 0) ? true : false); 
+        res.put("countEsImpar", (count % 2 != 0) ? true : false);     
         return res;
         
     }
