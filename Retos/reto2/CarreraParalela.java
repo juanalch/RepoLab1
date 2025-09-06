@@ -33,6 +33,21 @@ public class CarreraParalela {
         return r;
 }
 
+    // ===== Función de choque (carril 2) =====
+    public static Map<String,Object> calcularResultados(List<Integer> lista) {
+        Map<String,Integer> myc = minYConteo(lista);
+        int max = lista.stream().max(Integer::compareTo)
+                    .orElseThrow(() -> new IllegalArgumentException("Lista vacía"));
+        Map<String,Object> res = new LinkedHashMap<>();
+        // mismo contenido lógico pero diferente orden / variable -> provoca conflicto
+        res.put("min", myc.get("min"));
+        res.put("max", max);
+        res.put("count", myc.get("count"));
+        return res;
+    }
+
+
+
 
 
 
