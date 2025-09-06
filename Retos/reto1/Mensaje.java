@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Mensaje {
     public static String generarMensaje(List<Estudiante> estudiantes) {
-        // Usar stream para transformar la lista en partes del mensaje
+        
         String parteNombres = estudiantes.stream()
             .map(est -> est.nombre + " estudiante de la escuela de " + est.semestre + " semestre de " + est.edad + " años")
             .collect(Collectors.joining(" y "));

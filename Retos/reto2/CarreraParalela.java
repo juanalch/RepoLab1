@@ -26,7 +26,7 @@ public class CarreraParalela {
         int min = lista.stream()
                     .min(Integer::compareTo)
                     .orElseThrow(() -> new IllegalArgumentException("Lista vacía"));
-        int count = lista.size(); // más directo y eficiente
+        int count = lista.size(); 
         Map<String,Integer> r = new HashMap<>();
         r.put("min", min);
         r.put("count", count);

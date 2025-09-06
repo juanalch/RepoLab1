@@ -32,15 +32,12 @@ public class Reto4Tesoro {
         // Paso 2: pipeline con streams
         return combined.entrySet()
                 .stream()
-                // Aleja: transformar claves a mayúsculas
                 .map(e -> new AbstractMap.SimpleEntry<>(e.getKey().toUpperCase(), e.getValue()))
-                // Juana: ordenar por clave
                 .sorted(Map.Entry.comparingByKey())
-                // Recolectar a un LinkedHashMap para mantener el orden
                 .collect(Collectors.toMap(
                         Map.Entry::getKey,
                         Map.Entry::getValue,
-                        (v1, v2) -> v2,       // en conflicto gana Hashtable
+                        (v1, v2) -> v2,       
                         LinkedHashMap::new
                 ));
     }
@@ -70,16 +67,13 @@ public class Reto4Tesoro {
                 new AbstractMap.SimpleEntry<>("esmeralda", 6)
         );
 
-        // Aleja crea HashMap
+       
         Map<String, Integer> hashMap = createMapHashMap(entriesA);
 
-        // Juana crea Hashtable
         Map<String, Integer> hashTable = createMapHashtable(entriesB);
 
-        // Versión final combinada
         Map<String, Integer> finalMap = mergeAndFormat(hashMap, hashTable);
 
-        // Imprimir tesoro
         printFormatted(finalMap);
     }
 }
